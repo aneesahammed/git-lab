@@ -1,6 +1,26 @@
-DEV:
- - aahammed
-STAGING:
- - ddaniel
-PROD:
-  - mukrinas
+  columns:
+   - idea
+   - dev
+   - qa
+   - st
+   - uat
+   - prod
+ 
+  environments:
+    dev:
+     - aahammed
+    staging:
+     - ddaniel
+    production:
+    - mukrinas
+
+
+
+
+
+# DEV:
+#  - aahammed
+# STAGING:
+#  - ddaniel
+# PROD:
+#   - mukrinas
