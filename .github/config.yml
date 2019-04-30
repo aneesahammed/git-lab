@@ -1,6 +1,6 @@
-DEV
- - anees
-STAGING
-
-PROD
-  - hackmonmon
+DEV:
+ - aahammed
+STAGING:
+ - ddaniel
+PROD:
+  - mukrinas
