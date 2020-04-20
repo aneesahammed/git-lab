@@ -1,0 +1,13 @@
+{
+  name: '0f373d84-5bd4-4ef0-a78b-e3ffcbc8ada3.entry',
+  path_lower: '/0f373d84-5bd4-4ef0-a78b-e3ffcbc8ada3.entry',
+  path_display: '/0f373d84-5bd4-4ef0-a78b-e3ffcbc8ada3.entry',
+  id: 'id:6qkcBe6YBgMAAAAAAACbkw',
+  client_modified: '2018-02-18T14:47:15Z',
+  server_modified: '2020-04-08T17:20:35Z',
+  rev: '5a2cab7d91ec8f900a690',
+  size: 15135,
+  is_downloadable: true,
+  content_hash: '42bb4c9645d7ddd3ac85a247c1caf5c1250024213941ce83bcabfcfcba944e9a',
+  fileBinary: <Buffer 0a 24 30 66 33 37 33 64 38 34 2d 35 62 64 34 2d 34 65 66 30 2d 61 37 38 62 2d 65 33 66 66 63 62 63 38 61 64 61 33 10 ea d3 b7 ea dc 93 83 ea 08 18 98 ... 15085 more bytes>
+}
