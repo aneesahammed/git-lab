@@ -16,7 +16,7 @@
 </p>
 
 > Simple JSON data store in GitHub with CRUD interface for Node, Electron and the browser.
-**grud** is a convenient method of storing & performing read, update & delete operations on data without setting up a database server.
+> **grud** is a convenient method of storing & performing read, update & delete operations on data without setting up a database server.
 
 ### 🏠 [Homepage](https://github.com/aneesahammed/grud#readme)
 
@@ -27,6 +27,7 @@ npm install grud
 ```
 
 ## Initialize
+
 To get started with **grud**, initialize the `db` object by passing the required config.
 
 ```js
@@ -36,16 +37,20 @@ let config = {
   pathPrefix: "",              //Leave empty if you are using github.com | In case of Enterprise-GitHub e.g api/v3
   owner: "username",           //Your GitHub username
   repo: "my-repo",             //Your repository name where you'd like to have your JSON store hosted
-  path: "db.json",             //data store file-name with .JSON extension
+  path: "db.json",             //Your data store file with .json extension
   personalAccessToken: "xxxx", //Your personal-access-token with write access
 };
 let db = new Grud(config);
 ```
 
+Create your GitHub personal token from [here](https://github.com/settings/tokens).
+And please note that **grud** will create a new JSON data store file as mentioned in the `config` (db.json in our case) if the file is not found.<br/>
+If the file exists, data shall get appended to the collection array.
 
 # Create
 
 ## Create a single record
+
 The following query creates a single `post` record in your JSON dataStore (`db.json`).
 
 ```js
@@ -55,11 +60,12 @@ const data = {
   body: "quia et suscipit\nsuscipit recusandae consequuntur ",
 };
 const posts = await db.save(data);
-
 ```
 
 ## Create multiple records
+
 The following query creates multiple `post` records in your defined JSON datastore.
+
 ```js
 const data = [
   {
@@ -74,52 +80,68 @@ const data = [
   },
 ];
 const posts = await db.save(data);
-
 ```
 
 # Read
 
 ## Get record by Id or unique identifier
+
 The following query returns a single `post` record by unique identifier or Id.
+
 ```js
 const post = await db.find({ _id: "301b63faac384a31b3e785ebf40295e5" });
-
 ```
+
 or
+
 ```js
 const post = await db.find({ author: "Anand" });
-
 ```
 
 ## Get all records
+
 The following query returns all `posts` records.
+
 ```js
 const posts = await db.find();
 ```
 
 ## Update
+
 Update record by Id or unique identifier
 The following query finds the `post` record and updates it.
+
 ```js
-const posts = await db.update({ _id: "301b63faac384a31b3e785ebf40295e5" }, data);
+const posts = await db.update(
+  { _id: "301b63faac384a31b3e785ebf40295e5" },
+  data
+);
 ```
+
 or
+
 ```
 const posts = await db.update({ author: "Anand" }, data);
 ```
+
 # Delete
 
 ## Delete a single record
+
 The following query deletes a single `post` record.
+
 ```js
 await db.deleteOne({ _id: "301b63faac384a31b3e785ebf40295e5" });
 ```
+
 or
+
 ```js
 await db.deleteOne({ author: "Anand" });
 ```
 
 ## Delete all records
+
 TBA
 
 ## Run tests
@@ -139,7 +161,7 @@ Give a ⭐️ if this project helped you!
 ## Limits
 
 **grud** came out from the frequent need of having a database for internal tooling purpose.<br/>
-However, if your priority is to have secure/high-performance storage, you should stick to traditional databases like MongoDB.
+If your priority is to have secure/high-performance storage, you should stick to traditional databases like MongoDB.
 
 ## Author
 
